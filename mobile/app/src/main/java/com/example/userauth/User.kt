@@ -3,7 +3,7 @@ package com.example.userauth
 data class User(
     val username: String,
     val token: String,
-    val email: String? = null // Make this optional since the backend doesn't send it yet
+    val email: String? = null
 )
 
 data class LoginRequest(

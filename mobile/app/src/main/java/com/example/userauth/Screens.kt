@@ -9,7 +9,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.automirrored.filled.ExitToApp // Corrected for deprecation
+import androidx.compose.material.icons.automirrored.filled.ExitToApp
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -59,7 +59,7 @@ fun LoginScreen(onLoginSuccess: (User) -> Unit, onNavigateToRegister: () -> Unit
 
             ModernTextField(value = email, onValueChange = { email = it }, label = "Email", icon = Icons.Default.Email)
             Spacer(modifier = Modifier.height(16.dp))
-            // Changed from .Password to .Lock as Password is often missing in default libs
+
             ModernTextField(value = password, onValueChange = { password = it }, label = "Password", icon = Icons.Default.Lock, isPassword = true)
 
             Spacer(modifier = Modifier.height(30.dp))
@@ -121,7 +121,7 @@ fun RegisterScreen(onRegisterSuccess: () -> Unit, onBackToLogin: () -> Unit) {
             Spacer(modifier = Modifier.height(16.dp))
             ModernTextField(value = email, onValueChange = { email = it }, label = "Email", icon = Icons.Default.Email)
             Spacer(modifier = Modifier.height(16.dp))
-            // Changed from .Password to .Lock
+
             ModernTextField(value = password, onValueChange = { password = it }, label = "Password", icon = Icons.Default.Lock, isPassword = true)
 
             Spacer(modifier = Modifier.height(30.dp))

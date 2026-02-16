@@ -7,7 +7,7 @@ import retrofit2.http.POST
 import retrofit2.Response
 
 interface AuthApi {
-    @POST("api/auth/login") // This matches your @RequestMapping + @PostMapping
+    @POST("api/auth/login")
     suspend fun login(@Body request: LoginRequest): Response<User>
 
     @POST("api/auth/register")

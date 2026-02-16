@@ -11,7 +11,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             UserAuthTheme {
-                AppNavHost() // This calls the function below
+                AppNavHost()
             }
         }
     }
