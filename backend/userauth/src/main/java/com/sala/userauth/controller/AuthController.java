@@ -52,10 +52,12 @@ public class AuthController {
 
         return userRepository.findByEmail(email)
                 .map(user -> {
+                    // Inside the login method:
                     if (passwordEncoder.matches(password, user.getPassword())) {
                         Map<String, Object> response = new HashMap<>();
                         response.put("token", "dummy-jwt-token-12345");
                         response.put("username", user.getUsername());
+                        response.put("email", user.getEmail()); // ADD THIS LINE so Android gets the email
                         return ResponseEntity.ok(response);
                     } else {
                         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password");
